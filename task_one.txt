@@ -1,0 +1,151 @@
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop
+$ cd task\ 1/
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1
+$ git init
+Initialized empty Git repository in C:/Users/ADMIN/Desktop/task 1/.git/
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        RMI(Calculator).docx
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add         RMI(Calculator).docx
+bash: syntax error near unexpected token `('
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add  RMI(Calculator).docx
+bash: syntax error near unexpected token `('
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add RMI(Calculator).docx
+bash: syntax error near unexpected token `('
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add -A
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   RMI(Calculator).docx
+
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ ls
+'RMI(Calculator).docx'   hello.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ ls -la
+total 77
+drwxr-xr-x 1 ADMIN 197121     0 Jan 10 21:34  ./
+drwxr-xr-x 1 ADMIN 197121     0 Jan 10 21:28  ../
+drwxr-xr-x 1 ADMIN 197121     0 Jan 10 21:32  .git/
+-rw-r--r-- 1 ADMIN 197121 66884 Dec 21 06:36 'RMI(Calculator).docx'
+-rw-r--r-- 1 ADMIN 197121     7 Jan 10 21:34  hello.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add hello.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add 'RMI(Calculator).docx'
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   RMI(Calculator).docx
+        new file:   hello.txt
+
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git commit -m "first commit"
+[master (root-commit) ca79f8b] first commit
+ 2 files changed, 1 insertion(+)
+ create mode 100644 RMI(Calculator).docx
+ create mode 100644 hello.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add hello.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git commit -m "file changed"
+[master 870694c] file changed
+ 1 file changed, 1 insertion(+)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log
+commit 870694ce0391b0b6cf5e4cce6531ba340520ccf9 (HEAD -> master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Mon Jan 10 21:36:52 2022 +0530
+
+    file changed
+
+commit ca79f8b171732b863effa73351924c950cbfa347
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Mon Jan 10 21:35:21 2022 +0530
+
+    first commit
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add hello.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   hello.txt
+
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git commit -m "modified again"
+[master 46077e3] modified again
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$
