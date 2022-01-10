@@ -1,0 +1,300 @@
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ ls
+'RMI(Calculator).docx'   file.txt   hello.txt   task_one.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add file.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git commit -m "add file.txt"
+[master 9735508] add file.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log
+commit 9735508c17ce73f3230444271e6dc18ddb16d1c8 (HEAD -> master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Mon Jan 10 21:56:11 2022 +0530
+
+    add file.txt
+
+commit 9735508c17ce73f3230444271e6dc18ddb16d1c8 (HEAD -> master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Mon Jan 10 21:56:11 2022 +0530
+
+    add file.txt
+
+commit c48502773001c12831b64d430dc1fb394075815d (origin/master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Mon Jan 10 21:41:33 2022 +0530
+
+    message
+
+commit 46077e3678fa30c1927b8977861affb7a9c8f7b8
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Mon Jan 10 21:37:46 2022 +0530
+
+    modified again
+
+commit 870694ce0391b0b6cf5e4cce6531ba340520ccf9
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Mon Jan 10 21:36:52 2022 +0530
+
+    file changed
+
+commit ca79f8b171732b863effa73351924c950cbfa347
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Mon Jan 10 21:35:21 2022 +0530
+
+    first commit
+commit c48502773001c12831b64d430dc1fb394075815d (origin/master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Mon Jan 10 21:41:33 2022 +0530
+
+    message
+
+commit 46077e3678fa30c1927b8977861affb7a9c8f7b8
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Mon Jan 10 21:37:46 2022 +0530
+
+    modified again
+
+commit 870694ce0391b0b6cf5e4cce6531ba340520ccf9
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Mon Jan 10 21:36:52 2022 +0530
+
+    file changed
+
+commit ca79f8b171732b863effa73351924c950cbfa347
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Mon Jan 10 21:35:21 2022 +0530
+
+    first commit
+(END)      0 [sig] bash 1862! sigpacket::process: Suppressing signal 18 to win32 process (pid 8932)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log
+commit 9735508c17ce73f3230444271e6dc18ddb16d1c8 (HEAD -> master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Mon Jan 10 21:56:11 2022 +0530
+
+    add file.txt
+
+commit c48502773001c12831b64d430dc1fb394075815d (origin/master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Mon Jan 10 21:41:33 2022 +0530
+
+    message
+
+commit 46077e3678fa30c1927b8977861affb7a9c8f7b8
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Mon Jan 10 21:37:46 2022 +0530
+
+    modified again
+
+commit 870694ce0391b0b6cf5e4cce6531ba340520ccf9
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Mon Jan 10 21:36:52 2022 +0530
+
+    file changed
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 278 bytes | 278.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/junaid5/version_control.git
+   c485027..9735508  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git diff
+diff --git a/file.txt b/file.txt
+index 00300ba..de59f1e 100644
+--- a/file.txt
++++ b/file.txt
+@@ -1 +1 @@
+-my name is
+\ No newline at end of file
++my name is junaids
+\ No newline at end of file
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git diff --staged
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add file.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git diff
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git diff --staged
+diff --git a/file.txt b/file.txt
+index 00300ba..de59f1e 100644
+--- a/file.txt
++++ b/file.txt
+@@ -1 +1 @@
+-my name is
+\ No newline at end of file
++my name is junaids
+\ No newline at end of file
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git diff
+diff --git a/file.txt b/file.txt
+index de59f1e..1ae7c6c 100644
+--- a/file.txt
++++ b/file.txt
+@@ -1 +1 @@
+-my name is junaids
+\ No newline at end of file
++my name is junaid khan
+\ No newline at end of file
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git diff --staged
+diff --git a/file.txt b/file.txt
+index 00300ba..de59f1e 100644
+--- a/file.txt
++++ b/file.txt
+@@ -1 +1 @@
+-my name is
+\ No newline at end of file
++my name is junaids
+\ No newline at end of file
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git restore --staged file.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add file.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git commit -m "chad"
+[master fe79b3e] chad
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log
+commit fe79b3e3f224ed78f9d1b6fc88ef79b26e0fc974 (HEAD -> master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Mon Jan 10 22:03:10 2022 +0530
+
+    chad
+
+commit 9735508c17ce73f3230444271e6dc18ddb16d1c8 (origin/master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Mon Jan 10 21:56:11 2022 +0530
+
+    add file.txt
+
+commit c48502773001c12831b64d430dc1fb394075815d
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Mon Jan 10 21:41:33 2022 +0530
+
+    message
+
+commit 46077e3678fa30c1927b8977861affb7a9c8f7b8
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Mon Jan 10 21:37:46 2022 +0530
+
+    modified again
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git diff
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git diff --staged
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ vi file.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ vi file.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git restore file.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ vi file.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$
