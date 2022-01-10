@@ -1,0 +1,160 @@
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git branch
+* master
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git branch mybranch
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git branch
+* master
+  mybranch
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git switch mybranch
+Switched to branch 'mybranch'
+M       file.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (mybranch)
+$ git status
+On branch mybranch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (mybranch)
+$ git switch master
+Switched to branch 'master'
+M       file.txt
+Your branch is up to date with 'origin/master'.
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git switch mybranch
+Switched to branch 'mybranch'
+M       file.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (mybranch)
+$ vi file1.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (mybranch)
+$ git add file1.txt
+warning: LF will be replaced by CRLF in file1.txt.
+The file will have its original line endings in your working directory
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (mybranch)
+$ ls
+'RMI(Calculator).docx'   file.txt   file1.txt   hello.txt   task_one.txt   task_two.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (mybranch)
+$ git add file1.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (mybranch)
+$ git commit -m "add file1.txt"
+[mybranch 97532fb] add file1.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file1.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (mybranch)
+$ git log --oneline --graph
+* 97532fb (HEAD -> mybranch) add file1.txt
+* 0ced0c5 (origin/master, master) second task
+* fe79b3e chad
+* 9735508 add file.txt
+* c485027 message
+* 46077e3 modified again
+* 870694c file changed
+* ca79f8b first commit
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (mybranch)
+$ branch switch master
+bash: branch: command not found
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (mybranch)
+$ git switch master
+Switched to branch 'master'
+M       file.txt
+Your branch is up to date with 'origin/master'.
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log --oneline --graph
+* 0ced0c5 (HEAD -> master, origin/master) second task
+* fe79b3e chad
+* 9735508 add file.txt
+* c485027 message
+* 46077e3 modified again
+* 870694c file changed
+* ca79f8b first commit
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ vi file2.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add file2.txt
+warning: LF will be replaced by CRLF in file2.txt.
+The file will have its original line endings in your working directory
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add file2.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git commit -m "add file2.txt"
+[master d2307a5] add file2.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file2.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log --oneline --graph --all
+* d2307a5 (HEAD -> master) add file2.txt
+| * 97532fb (mybranch) add file1.txt
+|/
+* 0ced0c5 (origin/master) second task
+* fe79b3e chad
+* 9735508 add file.txt
+* c485027 message
+* 46077e3 modified again
+* 870694c file changed
+* ca79f8b first commit
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git switch mybranch
+Switched to branch 'mybranch'
+M       file.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (mybranch)
+$ ls
+'RMI(Calculator).docx'   file.txt   file1.txt   hello.txt   task_one.txt   task_two.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (mybranch)
+$ git diff mybranch master
+diff --git a/file1.txt b/file1.txt
+deleted file mode 100644
+index 31fed2c..0000000
+--- a/file1.txt
++++ /dev/null
+@@ -1 +0,0 @@
+-junaid khan
+diff --git a/file2.txt b/file2.txt
+new file mode 100644
+index 0000000..c6cac69
+--- /dev/null
++++ b/file2.txt
+@@ -0,0 +1 @@
++empty
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (mybranch)
+$
