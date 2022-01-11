@@ -1,0 +1,198 @@
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log
+commit 8df842c8f6470f5bf46ee944b42d719d5878d1c3 (HEAD -> master, origin/master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 15:26:17 2022 +0530
+
+    task 9
+
+commit b9e5f2d3c56c591f7a1b8b4d21e946592b1ed182
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 13:01:28 2022 +0530
+
+    revert "greeting changed"
+
+    This reverts commit 449cbf34c34bb6b1762bb38340cc67d79a9c3366.
+
+commit 449cbf34c34bb6b1762bb38340cc67d79a9c3366
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 13:00:23 2022 +0530
+
+    greeting changed
+
+commit 476f09b9f468f8c652524536068ebc8fd47ec94f
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:57:24 2022 +0530
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ ls
+ README.md               file1.txt   greeting.txt   task_five.txt   task_one.txt     task_two.txt
+'RMI(Calculator).docx'   file2.txt   hello.txt      task_four.txt   task_six.txt
+ file.txt                greet.txt   task_8.txt     task_nine.txt   task_three.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git reset --soft HEAD~1
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ ls
+ README.md               file1.txt   greeting.txt   task_five.txt   task_one.txt     task_two.txt
+'RMI(Calculator).docx'   file2.txt   hello.txt      task_four.txt   task_six.txt
+ file.txt                greet.txt   task_8.txt     task_nine.txt   task_three.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log
+commit b9e5f2d3c56c591f7a1b8b4d21e946592b1ed182 (HEAD -> master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 13:01:28 2022 +0530
+
+    revert "greeting changed"
+
+    This reverts commit 449cbf34c34bb6b1762bb38340cc67d79a9c3366.
+
+commit 449cbf34c34bb6b1762bb38340cc67d79a9c3366
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 13:00:23 2022 +0530
+
+    greeting changed
+
+commit 476f09b9f468f8c652524536068ebc8fd47ec94f
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:57:24 2022 +0530
+
+    task eight
+
+commit 327f37f67b8fbf0e13ce371e3effa0ccf45e4d43 (uppercase)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:48:58 2022 +0530
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git reset --mixed HEAD~1
+Unstaged changes after reset:
+M       greeting.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log
+commit 449cbf34c34bb6b1762bb38340cc67d79a9c3366 (HEAD -> master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 13:00:23 2022 +0530
+
+    greeting changed
+
+commit 476f09b9f468f8c652524536068ebc8fd47ec94f
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:57:24 2022 +0530
+
+    task eight
+
+commit 327f37f67b8fbf0e13ce371e3effa0ccf45e4d43 (uppercase)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:48:58 2022 +0530
+
+    change to uppercase
+
+commit 3c68faa546e825810f19ece96f0b1eddd206656e
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:50:15 2022 +0530
+
+    changed readme
+
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ ls
+ README.md               file1.txt   greeting.txt   task_five.txt   task_one.txt     task_two.txt
+'RMI(Calculator).docx'   file2.txt   hello.txt      task_four.txt   task_six.txt
+ file.txt                greet.txt   task_8.txt     task_nine.txt   task_three.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ ls -la
+total 162
+drwxr-xr-x 1 ADMIN 197121     0 Jan 11 15:25  ./
+drwxr-xr-x 1 ADMIN 197121     0 Jan 10 21:54  ../
+drwxr-xr-x 1 ADMIN 197121     0 Jan 11 15:30  .git/
+-rw-r--r-- 1 ADMIN 197121   737 Jan 11 12:51  README.md
+-rw-r--r-- 1 ADMIN 197121 66884 Dec 21 06:36 'RMI(Calculator).docx'
+-rw-r--r-- 1 ADMIN 197121    99 Jan 11 13:06  file.txt
+-rw-r--r-- 1 ADMIN 197121    13 Jan 11 10:40  file1.txt
+-rw-r--r-- 1 ADMIN 197121     7 Jan 10 22:30  file2.txt
+-rw-r--r-- 1 ADMIN 197121     9 Jan 11 12:53  greet.txt
+-rw-r--r-- 1 ADMIN 197121    21 Jan 11 13:01  greeting.txt
+-rw-r--r-- 1 ADMIN 197121    20 Jan 10 21:36  hello.txt
+-rw-r--r-- 1 ADMIN 197121  6289 Jan 11 12:56  task_8.txt
+-rw-r--r-- 1 ADMIN 197121  4812 Jan 11 10:12  task_five.txt
+-rw-r--r-- 1 ADMIN 197121  4269 Jan 11 10:01  task_four.txt
+-rw-r--r-- 1 ADMIN 197121  7242 Jan 11 15:25  task_nine.txt
+-rw-r--r-- 1 ADMIN 197121  4408 Jan 10 21:38  task_one.txt
+-rw-r--r-- 1 ADMIN 197121  8784 Jan 11 10:44  task_six.txt
+-rw-r--r-- 1 ADMIN 197121  4687 Jan 10 22:31  task_three.txt
+-rw-r--r-- 1 ADMIN 197121  8827 Jan 10 22:09  task_two.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git reset --hard HEAD~1
+HEAD is now at 476f09b task eight
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log
+commit 476f09b9f468f8c652524536068ebc8fd47ec94f (HEAD -> master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:57:24 2022 +0530
+
+    task eight
+
+commit 327f37f67b8fbf0e13ce371e3effa0ccf45e4d43 (uppercase)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:48:58 2022 +0530
+
+    change to uppercase
+
+commit 3c68faa546e825810f19ece96f0b1eddd206656e
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:50:15 2022 +0530
+
+    changed readme
+
+commit 1c330dc329cf0f07f4381fe4247be80937e65db5
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:47:17 2022 +0530
+
+    add content to greet.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git revert HEAD~1
+[master 3244b99] Revert "change to uppercase"
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log
+commit 3244b9998afbd708974b8cfbaee68e25c8206355 (HEAD -> master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 15:32:18 2022 +0530
+
+    Revert "change to uppercase"
+
+    This reverts commit 327f37f67b8fbf0e13ce371e3effa0ccf45e4d43.
+
+commit 476f09b9f468f8c652524536068ebc8fd47ec94f
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:57:24 2022 +0530
+
+    task eight
+
+commit 327f37f67b8fbf0e13ce371e3effa0ccf45e4d43 (uppercase)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:48:58 2022 +0530
+
+    change to uppercase
+
+commit 3c68faa546e825810f19ece96f0b1eddd206656e
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:50:15 2022 +0530
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$
