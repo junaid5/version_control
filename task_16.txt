@@ -1,0 +1,161 @@
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ vi bug.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add bug.txt
+warning: LF will be replaced by CRLF in bug.txt.
+The file will have its original line endings in your working directory
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add bug.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git commit -m "bug detected"
+[master 84baaf4] bug detected
+ 1 file changed, 1 insertion(+)
+ create mode 100644 bug.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git stash
+No local changes to save
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ vi bug.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git stash
+warning: LF will be replaced by CRLF in bug.txt.
+The file will have its original line endings in your working directory
+Saved working directory and index state WIP on master: 84baaf4 bug detected
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ vi bugs.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add bugs.txt
+warning: LF will be replaced by CRLF in bugs.txt.
+The file will have its original line endings in your working directory
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add bugs.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git commit -m "all debugging done"
+[master bab4935] all debugging done
+ 1 file changed, 1 insertion(+)
+ create mode 100644 bugs.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git stash
+No local changes to save
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git reset --hard HEAD
+HEAD is now at bab4935 all debugging done
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git stash --index
+error: unknown option `index'
+usage: git stash [push [-p|--patch] [-k|--[no-]keep-index] [-q|--quiet]
+                 [-u|--include-untracked] [-a|--all] [-m|--message <message>]
+                 [--] [<pathspec>...]]
+
+    -k, --keep-index      keep index
+    -p, --patch           stash in patch mode
+    -q, --quiet           quiet mode
+    -u, --include-untracked
+                          include untracked files in stash
+    -a, --all             include ignore files
+    -m, --message <message>
+                          stash message
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git stash apply
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bug.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add bug.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git commit -m "bug"
+[master 5c330fa] bug
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git reset --hard HEAD
+HEAD is now at 5c330fa bug
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git stash apply --index
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log
+commit 5c330fa5058473d494bc4233d10fb059863dfaed (HEAD -> master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 18:37:13 2022 +0530
+
+    bug
+
+commit bab4935404477c813e1e732888432fccbe2ffb55
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 18:33:46 2022 +0530
+
+    all debugging done
+
+commit 84baaf46bdc85a853f69420a61a7cc85d746b0f3
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 18:31:39 2022 +0530
+
+    bug detected
+
+commit 84ffc1c8775e7e49a9ac0994ff38803fb39ea81c (origin/master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 18:27:18 2022 +0530
+
+    task 15
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git branch
+* master
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git push -u origin master
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 731 bytes | 243.00 KiB/s, done.
+Total 9 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+To https://github.com/junaid5/version_control.git
+   84ffc1c..5c330fa  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$
