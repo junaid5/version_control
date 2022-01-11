@@ -1,0 +1,210 @@
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git branch uppercase
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git checkout uppercase
+Switched to branch 'uppercase'
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (uppercase)
+$ vi greet.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (uppercase)
+$ git commit -am "change to uppercase"
+warning: LF will be replaced by CRLF in greet.txt.
+The file will have its original line endings in your working directory
+[uppercase 9217bb6] change to uppercase
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (uppercase)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ vi README.md
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add README.md
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git commit -m "changed readme"
+[master 3c68faa] changed readme
+ 1 file changed, 2 insertions(+)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git branch
+* master
+  merge-conflict
+  uppercase
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git branch -d merge-conflict
+Deleted branch merge-conflict (was 571a1c1).
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git branch
+* master
+  uppercase
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log
+commit 3c68faa546e825810f19ece96f0b1eddd206656e (HEAD -> master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:50:15 2022 +0530
+
+    changed readme
+
+commit 1c330dc329cf0f07f4381fe4247be80937e65db5
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:47:17 2022 +0530
+
+    add content to greet.txt
+
+commit f338d9119b91e8b354d312a7584947a037c3cbc5 (origin/master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 10:51:50 2022 +0530
+
+    greet deleted
+
+commit 55bfb063d28372ce7d6dd9736ab27e0767541aec
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 10:44:48 2022 +0530
+
+    not
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git checkout uppercase
+Switched to branch 'uppercase'
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (uppercase)
+$ git log
+commit 9217bb67fd711b2b730c2440d25ae889dc78bb0f (HEAD -> uppercase)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:48:58 2022 +0530
+
+    change to uppercase
+
+commit 1c330dc329cf0f07f4381fe4247be80937e65db5
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:47:17 2022 +0530
+
+    add content to greet.txt
+
+commit f338d9119b91e8b354d312a7584947a037c3cbc5 (origin/master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 10:51:50 2022 +0530
+
+    greet deleted
+
+commit 55bfb063d28372ce7d6dd9736ab27e0767541aec
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 10:44:48 2022 +0530
+
+    not
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (uppercase)
+$ git rebase master
+Successfully rebased and updated refs/heads/uppercase.
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (uppercase)
+$ git log
+commit 327f37f67b8fbf0e13ce371e3effa0ccf45e4d43 (HEAD -> uppercase)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:48:58 2022 +0530
+
+    change to uppercase
+
+commit 3c68faa546e825810f19ece96f0b1eddd206656e (master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:50:15 2022 +0530
+
+    changed readme
+
+commit 1c330dc329cf0f07f4381fe4247be80937e65db5
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:47:17 2022 +0530
+
+    add content to greet.txt
+
+commit f338d9119b91e8b354d312a7584947a037c3cbc5 (origin/master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 10:51:50 2022 +0530
+
+    greet deleted
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (uppercase)
+$
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (uppercase)
+$ git switch master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log
+commit 3c68faa546e825810f19ece96f0b1eddd206656e (HEAD -> master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:50:15 2022 +0530
+
+    changed readme
+
+commit 1c330dc329cf0f07f4381fe4247be80937e65db5
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:47:17 2022 +0530
+
+    add content to greet.txt
+
+commit f338d9119b91e8b354d312a7584947a037c3cbc5 (origin/master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 10:51:50 2022 +0530
+
+    greet deleted
+
+commit 55bfb063d28372ce7d6dd9736ab27e0767541aec
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 10:44:48 2022 +0530
+
+    not
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git merge uppercase
+Updating 3c68faa..327f37f
+Fast-forward
+ greet.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log
+commit 327f37f67b8fbf0e13ce371e3effa0ccf45e4d43 (HEAD -> master, uppercase)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:48:58 2022 +0530
+
+    change to uppercase
+
+commit 3c68faa546e825810f19ece96f0b1eddd206656e
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:50:15 2022 +0530
+
+    changed readme
+
+commit 1c330dc329cf0f07f4381fe4247be80937e65db5
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 12:47:17 2022 +0530
+
+    add content to greet.txt
+
+commit f338d9119b91e8b354d312a7584947a037c3cbc5 (origin/master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 10:51:50 2022 +0530
+
+    greet deleted
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$
