@@ -1,0 +1,365 @@
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop
+$ cd task\ 1
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ cd git-katas/submodules/
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules (master)
+$ source setup.sh
+Initialized empty Git repository in C:/Users/ADMIN/Desktop/task 1/git-katas/submodules/exercise/remote/
+Cloning into 'component'...
+warning: You appear to have cloned an empty repository.
+done.
+[master (root-commit) dfd5cdf] Touch component header
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 component.h
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 223 bytes | 223.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To C:/Users/ADMIN/Desktop/task 1/git-katas/submodules/exercise/remote
+ * [new branch]      master -> master
+Initialized empty Git repository in C:/Users/ADMIN/Desktop/task 1/git-katas/submodules/exercise/product/.git/
+[master (root-commit) 47125c3] Touch product header
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 product.h
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise (master)
+$ ls
+component/  product/  remote/
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise (master)
+$ cd product/
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ git submodule add ../remote include
+Cloning into 'C:/Users/ADMIN/Desktop/task 1/git-katas/submodules/exercise/product/include'...
+done.
+warning: LF will be replaced by CRLF in .gitmodules.
+The file will have its original line endings in your working directory
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ ls
+include/  product.h
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitmodules
+        new file:   include
+
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ cd include
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product/include (master)
+$ ls
+component.h
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product/include (master)
+$ cd ..
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ cd ..
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise (master)
+$ cd product
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ git diff --cached
+diff --git a/.gitmodules b/.gitmodules
+new file mode 100644
+index 0000000..79d5c92
+--- /dev/null
++++ b/.gitmodules
+@@ -0,0 +1,3 @@
++[submodule "include"]
++       path = include
++       url = ../remote
+diff --git a/include b/include
+new file mode 160000
+index 0000000..dfd5cdf
+--- /dev/null
++++ b/include
+@@ -0,0 +1 @@
++Subproject commit dfd5cdfe187bc4381e02c813392f650bd17ae1cc
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ git commit
+[master 712e3d7]  product commited
+ 2 files changed, 4 insertions(+)
+ create mode 100644 .gitmodules
+ create mode 160000 include
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ cd ../component/
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/component (master)
+$ ls
+component.h
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/component (master)
+$ vi component.h
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/component (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   component.h
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/component (master)
+$ git commit -am "componet modified"
+warning: LF will be replaced by CRLF in component.h.
+The file will have its original line endings in your working directory
+[master c5f3658] componet modified
+ 1 file changed, 1 insertion(+)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/component (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 256 bytes | 256.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To C:/Users/ADMIN/Desktop/task 1/git-katas/submodules/exercise/remote
+   dfd5cdf..c5f3658  master -> master
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/component (master)
+$ cd ../product/
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ git submodule foreach 'git status'
+Entering 'include'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ cd include/
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product/include (master)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 236 bytes | 21.00 KiB/s, done.
+From C:/Users/ADMIN/Desktop/task 1/git-katas/submodules/exercise/remote
+   dfd5cdf..c5f3658  master     -> origin/master
+Updating dfd5cdf..c5f3658
+Fast-forward
+ component.h | 1 +
+ 1 file changed, 1 insertion(+)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product/include (master)
+$ ls
+component.h
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product/include (master)
+$ vi component.h
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product/include (master)
+$ cd ../product.h
+bash: cd: ../product.h: Not a directory
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product/include (master)
+$ cd ..
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ cd ../product/
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   include (new commits)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ git diff
+diff --git a/include b/include
+index dfd5cdf..c5f3658 160000
+--- a/include
++++ b/include
+@@ -1 +1 @@
+-Subproject commit dfd5cdfe187bc4381e02c813392f650bd17ae1cc
++Subproject commit c5f36584e1321f30635d6cf8a830440009931cd8
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ ls
+include/  product.h
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ cd include
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product/include (master)
+$ ls
+component.h
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product/include (master)
+$ vi component.h
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product/include (master)
+$ git commit -am "ch"
+[master ec549b6] ch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product/include (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 247 bytes | 247.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To C:/Users/ADMIN/Desktop/task 1/git-katas/submodules/exercise/remote
+   c5f3658..ec549b6  master -> master
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product/include (master)
+$ cd ..
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ cd ..
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise (master)
+$ git clone product product_alpha
+Cloning into 'product_alpha'...
+done.
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise (master)
+$ cd product_alpha/
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha (master)
+$ ls
+include/  product.h
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha (master)
+$ git log
+commit 712e3d7a11958652425bfcd3481030c43e355d8c (HEAD -> master, origin/master, origin/HEAD)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 19:19:09 2022 +0530
+
+     product commited
+
+commit 47125c336fea6c756ea7a1139b607c4e62c38804
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 19:14:18 2022 +0530
+
+    Touch product header
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha (master)
+$ cd include/
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha/include (master)
+$ ls
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha/include (master)
+$ cd ..
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha (master)
+$ git submodule init
+Submodule 'include' (C:/Users/ADMIN/Desktop/task 1/git-katas/submodules/exercise/remote) registered for path 'include'
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha (master)
+$ cd include/
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha/include (master)
+$ ls
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha/include (master)
+$ git submodule init
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha/include (master)
+$ ls
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha/include (master)
+$ git submodule update
+Cloning into 'C:/Users/ADMIN/Desktop/task 1/git-katas/submodules/exercise/product_alpha/include'...
+done.
+Submodule path './': checked out 'dfd5cdfe187bc4381e02c813392f650bd17ae1cc'
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha/include ((dfd5cdf...))
+$ ls
+component.h
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha/include ((dfd5cdf...))
+$ vi component.h
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha/include ((dfd5cdf...))
+$ cd ..
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha (master)
+$ cd ../product
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   include (new commits)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ git add .
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ git commit -m "comit"
+[master c3219b8] comit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ git ../product
+git: '../product' is not a git command. See 'git --help'.
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ cd ../product
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product (master)
+$ cd ../product_alpha/
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha (master)
+$ git submodule update
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha (master)
+$ cd include/
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha/include ((dfd5cdf...))
+$ vi component.h
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha/include ((dfd5cdf...))
+$ cd ..
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha (master)
+$ git submodule status
+ dfd5cdfe187bc4381e02c813392f650bd17ae1cc include (dfd5cdf)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha (master)
+$ git submodule update --remote
+Submodule path 'include': checked out 'ec549b62f81cef7ec8287bed4d0e993f35e0c75a'
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha (master)
+$ cd include/
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha/include ((ec549b6...))
+$ vi component.h
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha/include ((ec549b6...))
+$ git submodule status
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/submodules/exercise/product_alpha/include ((ec549b6...))
+$

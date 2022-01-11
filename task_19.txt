@@ -1,0 +1,131 @@
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas (master)
+$ cd git-tag/
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/git-tag (master)
+$ source setup.sh
+Initialized empty Git repository in C:/Users/ADMIN/Desktop/task 1/git-katas/git-tag/exercise/.git/
+warning: LF will be replaced by CRLF in dummy.txt.
+The file will have its original line endings in your working directory
+[master (root-commit) 922cec9] dummy commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 dummy.txt
+warning: LF will be replaced by CRLF in dummy.txt.
+The file will have its original line endings in your working directory
+[master 3d5daca] adding more content to dummy.txt
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/git-tag/exercise (master)
+$ git tag
+dummy
+dummy2
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/git-tag/exercise (master)
+$ ls
+dummy.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/git-tag/exercise (master)
+$ vi dummy.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/git-tag/exercise (master)
+$ git add dummy.txt
+warning: LF will be replaced by CRLF in dummy.txt.
+The file will have its original line endings in your working directory
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/git-tag/exercise (master)
+$ git add dummy.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/git-tag/exercise (master)
+$ git commit -m "dumm"
+[master d7a95b6] dumm
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/git-tag/exercise (master)
+$ git tag
+dummy
+dummy2
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/git-tag/exercise (master)
+$ git tag --list
+dummy
+dummy2
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/git-tag/exercise (master)
+$ git tag 2.2
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/git-tag/exercise (master)
+$ git tag
+2.2
+dummy
+dummy2
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/git-tag/exercise (master)
+$ git log
+commit d7a95b6ac1973735f7d70a431605f9b83b38e267 (HEAD -> master, tag: 2.2)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 20:48:43 2022 +0530
+
+    dumm
+
+commit 3d5dacab1e357093aed6413790aff5bc6041ae2b (tag: dummy2)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 20:47:06 2022 +0530
+
+    adding more content to dummy.txt
+
+commit 922cec9475c6d16f868be4567c0d11f291415006 (tag: dummy)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 20:47:05 2022 +0530
+
+    dummy commit
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/git-tag/exercise (master)
+$ git log --oneline
+d7a95b6 (HEAD -> master, tag: 2.2) dumm
+3d5daca (tag: dummy2) adding more content to dummy.txt
+922cec9 (tag: dummy) dummy commit
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/git-tag/exercise (master)
+$ git tag -a 6.8 3d5daca -m "added tag"
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/git-tag/exercise (master)
+$ git log
+commit d7a95b6ac1973735f7d70a431605f9b83b38e267 (HEAD -> master, tag: 2.2)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 20:48:43 2022 +0530
+
+    dumm
+
+commit 3d5dacab1e357093aed6413790aff5bc6041ae2b (tag: dummy2, tag: 6.8)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 20:47:06 2022 +0530
+
+    adding more content to dummy.txt
+
+commit 922cec9475c6d16f868be4567c0d11f291415006 (tag: dummy)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 20:47:05 2022 +0530
+
+    dummy commit
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/git-tag/exercise (master)
+$ git show dummy
+commit 922cec9475c6d16f868be4567c0d11f291415006 (tag: dummy)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 20:47:05 2022 +0530
+
+    dummy commit
+
+diff --git a/dummy.txt b/dummy.txt
+new file mode 100644
+index 0000000..421376d
+--- /dev/null
++++ b/dummy.txt
+@@ -0,0 +1 @@
++dummy
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/git-tag/exercise (master)
+$ git tag -d dummy2
+Deleted tag 'dummy2' (was d1082b8)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1/git-katas/git-tag/exercise (master)
+$
