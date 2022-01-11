@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 my name is junaid khannn
+=======
+my name is junaid khannn
+>>>>>>> merge-conflict
