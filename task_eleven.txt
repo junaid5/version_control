@@ -1,0 +1,64 @@
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ ls -R
+.:
+ README.md               greet.txt       task_four.txt   task_three.txt
+'RMI(Calculator).docx'   greeting.txt    task_nine.txt   task_two.txt
+ file.txt                hello.txt       task_one.txt
+ file1.txt               task_8.txt      task_six.txt
+ file2.txt               task_five.txt   task_ten.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ clean -n
+bash: clean: command not found
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git clean -n
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ ls
+ README.md               greet.txt       task_four.txt   task_three.txt
+'RMI(Calculator).docx'   greeting.txt    task_nine.txt   task_two.txt
+ file.txt                hello.txt       task_one.txt
+ file1.txt               task_8.txt      task_six.txt
+ file2.txt               task_five.txt   task_ten.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ ls -R
+.:
+ README.md               greet.txt       task_four.txt   task_three.txt
+'RMI(Calculator).docx'   greeting.txt    task_nine.txt   task_two.txt
+ file.txt                hello.txt       task_one.txt
+ file1.txt               task_8.txt      task_six.txt
+ file2.txt               task_five.txt   task_ten.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git clean -n -d
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ ls -R
+.:
+ README.md               greet.txt       task_four.txt   task_three.txt
+'RMI(Calculator).docx'   greeting.txt    task_nine.txt   task_two.txt
+ file.txt                hello.txt       task_one.txt
+ file1.txt               task_8.txt      task_six.txt
+ file2.txt               task_five.txt   task_ten.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git clean -f -d
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ ls
+ README.md               greet.txt       task_four.txt   task_three.txt
+'RMI(Calculator).docx'   greeting.txt    task_nine.txt   task_two.txt
+ file.txt                hello.txt       task_one.txt
+ file1.txt               task_8.txt      task_six.txt
+ file2.txt               task_five.txt   task_ten.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git pull origin master
+From https://github.com/junaid5/version_control
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$
