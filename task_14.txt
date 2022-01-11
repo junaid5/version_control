@@ -1,0 +1,327 @@
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ vi how.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add how.txt
+warning: LF will be replaced by CRLF in how.txt.
+The file will have its original line endings in your working directory
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add how.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git commit -m "first commit"
+[master 2ab72e4] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 how.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ vi how.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git commit -am "nice"
+warning: LF will be replaced by CRLF in how.txt.
+The file will have its original line endings in your working directory
+[master e6fcd5a] nice
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ vi how.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git commit -am "nicer"
+warning: LF will be replaced by CRLF in how.txt.
+The file will have its original line endings in your working directory
+[master 2cb862b] nicer
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ vi how.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git commit -am "nicesr"
+warning: LF will be replaced by CRLF in how.txt.
+The file will have its original line endings in your working directory
+[master ef68a81] nicesr
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log
+commit ef68a81635d987ce1279468a152bc56434247504 (HEAD -> master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 16:27:44 2022 +0530
+
+    nicesr
+
+commit 2cb862b3629619e856181a695032fa0b00e12faf
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 16:27:32 2022 +0530
+
+    nicer
+
+commit e6fcd5a390990690da3f74987de42d44549dcd76
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 16:27:11 2022 +0530
+
+    nice
+
+commit 2ab72e4a96fcaeb9a8732deff5a822a2c9cdf70d
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 16:26:43 2022 +0530
+
+    first commit
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git rebase -i HEAD~0
+Successfully rebased and updated refs/heads/master.
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log --oneline --graph
+* ef68a81 (HEAD -> master) nicesr
+* 2cb862b nicer
+* e6fcd5a nice
+* 2ab72e4 first commit
+* 73d2256 (origin/master) task thirteen
+* 2380848 deleted
+* bc394a8 task twelve
+* 81d79ef this will be amended
+* 7ae8b62 task 11
+*   5bab58e Merge branch 'master' of https://github.com/junaid5/version_control
+|\
+| * 8df842c task 9
+| * b9e5f2d revert "greeting changed"
+| * 449cbf3 greeting changed
+* | 438f3f6 task nine
+* | 792e6c4 task ten
+* | 3244b99 Revert "change to uppercase"
+|/
+* 476f09b task eight
+* 327f37f change to uppercase
+* 3c68faa changed readme
+* 1c330dc add content to greet.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git rebase -i HEAD~3
+Successfully rebased and updated refs/heads/master.
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log --oneline --graph
+* ef68a81 (HEAD -> master) nicesr
+* 2cb862b nicer
+* e6fcd5a nice
+* 2ab72e4 first commit
+* 73d2256 (origin/master) task thirteen
+* 2380848 deleted
+* bc394a8 task twelve
+* 81d79ef this will be amended
+* 7ae8b62 task 11
+*   5bab58e Merge branch 'master' of https://github.com/junaid5/version_control
+|\
+| * 8df842c task 9
+| * b9e5f2d revert "greeting changed"
+| * 449cbf3 greeting changed
+* | 438f3f6 task nine
+* | 792e6c4 task ten
+* | 3244b99 Revert "change to uppercase"
+|/
+* 476f09b task eight
+* 327f37f change to uppercase
+* 3c68faa changed readme
+* 1c330dc add content to greet.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git commit
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git rebase -i HEAD~3
+Successfully rebased and updated refs/heads/master.
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git commit
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log --oneline --graph
+* ef68a81 (HEAD -> master) nicesr
+* 2cb862b nicer
+* e6fcd5a nice
+* 2ab72e4 first commit
+* 73d2256 (origin/master) task thirteen
+* 2380848 deleted
+* bc394a8 task twelve
+* 81d79ef this will be amended
+* 7ae8b62 task 11
+*   5bab58e Merge branch 'master' of https://github.com/junaid5/version_control
+|\
+| * 8df842c task 9
+| * b9e5f2d revert "greeting changed"
+| * 449cbf3 greeting changed
+* | 438f3f6 task nine
+* | 792e6c4 task ten
+* | 3244b99 Revert "change to uppercase"
+|/
+* 476f09b task eight
+* 327f37f change to uppercase
+* 3c68faa changed readme
+* 1c330dc add content to greet.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git rebase -i HEAD~14
+interactive rebase in progress; onto 327f37f
+Last commands done (7 commands done):
+   pick b9e5f2d revert "greeting changed"
+   pick 8df842c task 9
+  (see more in file .git/rebase-merge/done)
+Next commands to do (9 remaining commands):
+   pick 7ae8b62 task 11
+   pick 81d79ef this will be amended
+  (use "git rebase --edit-todo" to view and edit)
+You are currently rebasing branch 'master' on '327f37f'.
+  (all conflicts fixed: run "git rebase --continue")
+
+nothing to commit, working tree clean
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git rebase --skip'
+Could not apply 8df842c... task 9
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master|REBASE 7/16)
+$ git log --oneline --graph
+* b4341fb (HEAD) revert "greeting changed"
+* ca2073f greeting changed
+* 438f3f6 task nine
+* 792e6c4 task ten
+* 3244b99 Revert "change to uppercase"
+* 476f09b task eight
+* 327f37f change to uppercase
+* 3c68faa changed readme
+* 1c330dc add content to greet.txt
+* f338d91 greet deleted
+* 55bfb06 not
+* 85f0025 jo
+* 592ad0b read
+* d4050c1 chang
+*   dca8b99 merge conflict
+|\
+| * 571a1c1 add relevant fact
+* | ba6da3a add
+* | d709188 nnnMerge branch 'merge-conflict'
+|\|
+| * 423cb62 taks5
+| * dc32dbf file1
+* | bc05782 add
+* |   c59698f Merge branch 'mybranch'
+|\ \
+| |/
+|/|
+| * 81f5480 task three
+| * 97532fb add file1.txt
+* | d877e84 add
+* | 6bf7f87 task four
+* | 41d9d46 added
+* | 55f94c0 small
+* | 691de0d task 3
+* | d2307a5 add file2.txt
+|/
+* 0ced0c5 second task
+* fe79b3e chad
+* 9735508 add file.txt
+* c485027 message
+* 46077e3 modified again
+* 870694c file changed
+* ca79f8b first commit
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master|REBASE 7/16)
+$ git rebase -i HEAD~37
+fatal: It seems that there is already a rebase-merge directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+        git rebase (--continue | --abort | --skip)
+If that is not the case, please
+        rm -fr ".git/rebase-merge"
+and run me again.  I am stopping in case you still have something
+valuable there.
+
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master|REBASE 7/16)
+$ git rebase -i HEAD~36
+fatal: It seems that there is already a rebase-merge directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+        git rebase (--continue | --abort | --skip)
+If that is not the case, please
+        rm -fr ".git/rebase-merge"
+and run me again.  I am stopping in case you still have something
+valuable there.
+
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master|REBASE 7/16)
+$ rm -fr .git/rebase-merge
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 ((b4341fb...)|CHERRY-PICKING)
+$ git rebase -i HEAD~36
+fatal: invalid upstream 'HEAD~36'
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 ((b4341fb...)|CHERRY-PICKING)
+$ git rebase -i HEAD~34
+fatal: invalid upstream 'HEAD~34'
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 ((b4341fb...)|CHERRY-PICKING)
+$ git rebase -i HEAD~20
+interactive rebase in progress; onto 6bf7f87
+Last commands done (3 commands done):
+   pick 97532fb add file1.txt
+   pick 81f5480 task three
+  (see more in file .git/rebase-merge/done)
+Next commands to do (19 remaining commands):
+   pick bc05782 add
+   pick dc32dbf file1
+  (use "git rebase --edit-todo" to view and edit)
+You are currently rebasing.
+  (all conflicts fixed: run "git rebase --continue")
+
+nothing to commit, working tree clean
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git rebase --skip'
+Could not apply 81f5480... task three
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (detached HEAD|REBASE 3/22)
+$ git rebase -i HEAD~26
+fatal: It seems that there is already a rebase-merge directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+        git rebase (--continue | --abort | --skip)
+If that is not the case, please
+        rm -fr ".git/rebase-merge"
+and run me again.  I am stopping in case you still have something
+valuable there.
+
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (detached HEAD|REBASE 3/22)
+$ rm -fr .git/rebase-merge
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 ((32b37b2...)|CHERRY-PICKING)
+$ git rebase -i HEAD~26
+fatal: invalid upstream 'HEAD~26'
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 ((32b37b2...)|CHERRY-PICKING)
+$
