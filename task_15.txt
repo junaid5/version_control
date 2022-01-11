@@ -1,0 +1,62 @@
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git reabse --interactive
+git: 'reabse' is not a git command. See 'git --help'.
+
+The most similar command is
+        rebase
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git rebase --interactive
+Successfully rebased and updated refs/heads/master.
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log
+commit 5e214526df99c1349a1042ef920982aece4da8ae (HEAD -> master, origin/master)
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 18:22:15 2022 +0530
+
+    task 14
+
+commit ef68a81635d987ce1279468a152bc56434247504
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 16:27:44 2022 +0530
+
+    nicesr
+
+commit 2cb862b3629619e856181a695032fa0b00e12faf
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 16:27:32 2022 +0530
+
+    nicer
+
+commit e6fcd5a390990690da3f74987de42d44549dcd76
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 16:27:11 2022 +0530
+
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log --oneline
+5e21452 (HEAD -> master, origin/master) task 14
+ef68a81 nicesr
+2cb862b nicer
+e6fcd5a nice
+2ab72e4 first commit
+73d2256 task thirteen
+2380848 deleted
+bc394a8 task twelve
+81d79ef this will be amended
+7ae8b62 task 11
+5bab58e Merge branch 'master' of https://github.com/junaid5/version_control
+438f3f6 task nine
+792e6c4 task ten
+3244b99 Revert "change to uppercase"
+8df842c task 9
+b9e5f2d revert "greeting changed"
+449cbf3 greeting changed
+476f09b task eight
+327f37f change to uppercase
+3c68faa changed readme
+1c330dc add content to greet.txt
+f338d91 greet deleted
+55bfb06 not
+
