@@ -1,0 +1,203 @@
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log --oneline --graph
+* bc394a8 (HEAD -> master, origin/master) task twelve
+* 81d79ef this will be amended
+* 7ae8b62 task 11
+*   5bab58e Merge branch 'master' of https://github.com/junaid5/version_control
+|\
+| * 8df842c task 9
+| * b9e5f2d revert "greeting changed"
+| * 449cbf3 greeting changed
+* | 438f3f6 task nine
+* | 792e6c4 task ten
+* | 3244b99 Revert "change to uppercase"
+|/
+* 476f09b task eight
+* 327f37f (uppercase) change to uppercase
+* 3c68faa changed readme
+* 1c330dc add content to greet.txt
+* f338d91 greet deleted
+* 55bfb06 not
+* 85f0025 jo
+* 592ad0b read
+* d4050c1 chang
+*   dca8b99 merge conflict
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git reflog
+bc394a8 (HEAD -> master, origin/master) HEAD@{0}: commit: task twelve
+81d79ef HEAD@{1}: commit (amend): this will be amended
+160204d HEAD@{2}: commit (amend): bat
+09d1449 HEAD@{3}: commit: bat
+7ae8b62 HEAD@{4}: commit: task 11
+5bab58e HEAD@{5}: pull origin master: Merge made by the 'ort' strategy.
+438f3f6 HEAD@{6}: commit: task nine
+792e6c4 HEAD@{7}: commit: task ten
+3244b99 HEAD@{8}: revert: Revert "change to uppercase"
+476f09b HEAD@{9}: reset: moving to HEAD~1
+449cbf3 HEAD@{10}: reset: moving to HEAD~1
+b9e5f2d HEAD@{11}: reset: moving to HEAD~1
+8df842c HEAD@{12}: commit: task 9
+b9e5f2d HEAD@{13}: reset: moving to b9e5f2d3c56c591f7a1b8b4d21e946592b1ed182
+b9e5f2d HEAD@{14}: revert: revert "greeting changed"
+449cbf3 HEAD@{15}: commit: greeting changed
+476f09b HEAD@{16}: commit: task eight
+327f37f (uppercase) HEAD@{17}: merge uppercase: Fast-forward
+3c68faa HEAD@{18}: checkout: moving from uppercase to master
+327f37f (uppercase) HEAD@{19}: rebase (finish): returning to refs/heads/uppercase
+327f37f (uppercase) HEAD@{20}: rebase (pick): change to uppercase
+3c68faa HEAD@{21}: rebase (start): checkout master
+
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git rebase -i
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git statu
+git: 'statu' is not a git command. See 'git --help'.
+
+The most similar commands are
+        status
+        stage
+        stash
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    task_11.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add .
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git commit -m "deleted"
+[master 2380848] deleted
+ 1 file changed, 145 deletions(-)
+ delete mode 100644 task_11.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git rebase -i
+Successfully rebased and updated refs/heads/master.
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log --oneline --graph
+* 2380848 (HEAD -> master) deleted
+* bc394a8 (origin/master) task twelve
+* 81d79ef this will be amended
+* 7ae8b62 task 11
+*   5bab58e Merge branch 'master' of https://github.com/junaid5/version_control
+|\
+| * 8df842c task 9
+| * b9e5f2d revert "greeting changed"
+| * 449cbf3 greeting changed
+* | 438f3f6 task nine
+* | 792e6c4 task ten
+* | 3244b99 Revert "change to uppercase"
+|/
+* 476f09b task eight
+* 327f37f (uppercase) change to uppercase
+* 3c68faa changed readme
+* 1c330dc add content to greet.txt
+* f338d91 greet deleted
+* 55bfb06 not
+* 85f0025 jo
+* 592ad0b read
+* d4050c1 chang
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git rebase -i HEAD~1
+Successfully rebased and updated refs/heads/master.
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log --oneline --graph
+* 2380848 (HEAD -> master) deleted
+* bc394a8 (origin/master) task twelve
+* 81d79ef this will be amended
+* 7ae8b62 task 11
+*   5bab58e Merge branch 'master' of https://github.com/junaid5/version_control
+|\
+| * 8df842c task 9
+| * b9e5f2d revert "greeting changed"
+| * 449cbf3 greeting changed
+* | 438f3f6 task nine
+* | 792e6c4 task ten
+* | 3244b99 Revert "change to uppercase"
+|/
+* 476f09b task eight
+* 327f37f (uppercase) change to uppercase
+* 3c68faa changed readme
+* 1c330dc add content to greet.txt
+* f338d91 greet deleted
+* 55bfb06 not
+* 85f0025 jo
+* 592ad0b read
+* d4050c1 chang
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git branch
+* master
+  uppercase
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git branch -d uppercase
+Deleted branch uppercase (was 327f37f).
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git rebase -i
+Successfully rebased and updated refs/heads/master.
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log --oneline --graph
+* 2380848 (HEAD -> master) deleted
+* bc394a8 (origin/master) task twelve
+* 81d79ef this will be amended
+* 7ae8b62 task 11
+*   5bab58e Merge branch 'master' of https://github.com/junaid5/version_control
+|\
+| * 8df842c task 9
+| * b9e5f2d revert "greeting changed"
+| * 449cbf3 greeting changed
+* | 438f3f6 task nine
+* | 792e6c4 task ten
+* | 3244b99 Revert "change to uppercase"
+|/
+* 476f09b task eight
+* 327f37f change to uppercase
+* 3c68faa changed readme
+* 1c330dc add content to greet.txt
+* f338d91 greet deleted
+* 55bfb06 not
+* 85f0025 jo
+* 592ad0b read
+* d4050c1 chang
+
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git branch
+* master
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$
