@@ -1,0 +1,174 @@
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git branch greeting
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git checkout greeting
+Switched to branch 'greeting'
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (greeting)
+$ vi greeting.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (greeting)
+$ git status
+On branch greeting
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   greeting.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (greeting)
+$ git add greeting.txt
+warning: LF will be replaced by CRLF in greeting.txt.
+The file will have its original line endings in your working directory
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (greeting)
+$ git add greeting.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (greeting)
+$ git commit -m "add"
+[greeting d877e84] add
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (greeting)
+$ git switch master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ vi README.md
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log --oneline --graph --all
+* d877e84 (greeting) add
+* 6bf7f87 (HEAD -> master, origin/master) task four
+* 41d9d46 added
+* 55f94c0 small
+* 691de0d task 3
+* d2307a5 add file2.txt
+| * 81f5480 (mybranch) task three
+| * 97532fb add file1.txt
+|/
+* 0ced0c5 second task
+* fe79b3e chad
+* 9735508 add file.txt
+* c485027 message
+* 46077e3 modified again
+* 870694c file changed
+* ca79f8b first commit
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ diff master greeting
+diff: master: No such file or directory
+diff: greeting: No such file or directory
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git diff master greeting
+diff --git a/greeting.txt b/greeting.txt
+index a08432c..4c38b39 100644
+--- a/greeting.txt
++++ b/greeting.txt
+@@ -1 +1 @@
+-MY NAME IS
+\ No newline at end of file
++MY NAME IS Hello
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git merge greeting
+Updating 6bf7f87..d877e84
+Fast-forward
+ greeting.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log --oneline --graph --all
+* d877e84 (HEAD -> master, greeting) add
+* 6bf7f87 (origin/master) task four
+* 41d9d46 added
+* 55f94c0 small
+* 691de0d task 3
+* d2307a5 add file2.txt
+| * 81f5480 (mybranch) task three
+| * 97532fb add file1.txt
+|/
+* 0ced0c5 second task
+* fe79b3e chad
+* 9735508 add file.txt
+* c485027 message
+* 46077e3 modified again
+* 870694c file changed
+* ca79f8b first commit
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git merge master greeting
+Already up to date.
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log --oneline --graph --all
+* d877e84 (HEAD -> master, greeting) add
+* 6bf7f87 (origin/master) task four
+* 41d9d46 added
+* 55f94c0 small
+* 691de0d task 3
+* d2307a5 add file2.txt
+| * 81f5480 (mybranch) task three
+| * 97532fb add file1.txt
+|/
+* 0ced0c5 second task
+* fe79b3e chad
+* 9735508 add file.txt
+* c485027 message
+* 46077e3 modified again
+* 870694c file changed
+* ca79f8b first commit
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git branch
+  greeting
+* master
+  mybranch
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git branch -d mybranch
+error: The branch 'mybranch' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D mybranch'.
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git merge mybranch
+Merge made by the 'ort' strategy.
+ file1.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file1.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log --oneline --graph --all
+*   c59698f (HEAD -> master) Merge branch 'mybranch'
+|\
+| * 81f5480 (mybranch) task three
+| * 97532fb add file1.txt
+* | d877e84 (greeting) add
+* | 6bf7f87 (origin/master) task four
+* | 41d9d46 added
+* | 55f94c0 small
+* | 691de0d task 3
+* | d2307a5 add file2.txt
+|/
+* 0ced0c5 second task
+* fe79b3e chad
+* 9735508 add file.txt
+* c485027 message
+* 46077e3 modified again
+* 870694c file changed
+* ca79f8b first commit
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git merge greeting
+Already up to date.
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git branch -d mybranch
+Deleted branch mybranch (was 81f5480).
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$
