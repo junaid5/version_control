@@ -1,0 +1,261 @@
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log --decorate --oneline
+476f09b (HEAD -> master, origin/master) task eight
+327f37f (uppercase) change to uppercase
+3c68faa changed readme
+1c330dc add content to greet.txt
+f338d91 greet deleted
+55bfb06 not
+85f0025 jo
+592ad0b read
+d4050c1 chang
+dca8b99 merge conflict
+ba6da3a add
+571a1c1 add relevant fact
+d709188 nnnMerge branch 'merge-conflict'
+423cb62 taks5
+dc32dbf file1
+bc05782 add
+c59698f Merge branch 'mybranch'
+d877e84 add
+6bf7f87 task four
+41d9d46 added
+55f94c0 small
+691de0d task 3
+81f5480 task three
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ cat greeting.txt
+MY NAME IS Hello hi
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ vi greeting.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git add greeting.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git commit -m "greeting changed"
+[master 449cbf3] greeting changed
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git revert
+usage: git revert [<options>] <commit-ish>...
+   or: git revert <subcommand>
+
+    --quit                end revert or cherry-pick sequence
+    --continue            resume revert or cherry-pick sequence
+    --abort               cancel revert or cherry-pick sequence
+    --skip                skip current commit and continue
+    --cleanup <mode>      how to strip spaces and #comments from message
+    -n, --no-commit       don't automatically commit
+    -e, --edit            edit the commit message
+    -s, --signoff         add a Signed-off-by trailer
+    -m, --mainline <parent-number>
+                          select mainline parent
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --strategy <strategy>
+                          merge strategy
+    -X, --strategy-option <option>
+                          option for merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log --decorate --oneline
+449cbf3 (HEAD -> master) greeting changed
+476f09b (origin/master) task eight
+327f37f (uppercase) change to uppercase
+3c68faa changed readme
+1c330dc add content to greet.txt
+f338d91 greet deleted
+55bfb06 not
+85f0025 jo
+592ad0b read
+d4050c1 chang
+dca8b99 merge conflict
+ba6da3a add
+571a1c1 add relevant fact
+d709188 nnnMerge branch 'merge-conflict'
+423cb62 taks5
+dc32dbf file1
+bc05782 add
+c59698f Merge branch 'mybranch'
+d877e84 add
+6bf7f87 task four
+41d9d46 added
+55f94c0 small
+691de0d task 3
+:
+449cbf3 (HEAD -> master) greeting changed
+476f09b (origin/master) task eight
+327f37f (uppercase) change to uppercase
+3c68faa changed readme
+1c330dc add content to greet.txt
+f338d91 greet deleted
+55bfb06 not
+85f0025 jo
+592ad0b read
+d4050c1 chang
+dca8b99 merge conflict
+ba6da3a add
+571a1c1 add relevant fact
+d709188 nnnMerge branch 'merge-conflict'
+423cb62 taks5
+dc32dbf file1
+bc05782 add
+c59698f Merge branch 'mybranch'
+d877e84 add
+6bf7f87 task four
+41d9d46 added
+55f94c0 small
+691de0d task 3
+
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git revert 449cbf3
+[master b9e5f2d] revert "greeting changed"
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log --decorate --oneline
+b9e5f2d (HEAD -> master) revert "greeting changed"
+449cbf3 greeting changed
+476f09b (origin/master) task eight
+327f37f (uppercase) change to uppercase
+3c68faa changed readme
+1c330dc add content to greet.txt
+f338d91 greet deleted
+55bfb06 not
+85f0025 jo
+592ad0b read
+d4050c1 chang
+dca8b99 merge conflict
+ba6da3a add
+571a1c1 add relevant fact
+d709188 nnnMerge branch 'merge-conflict'
+423cb62 taks5
+dc32dbf file1
+bc05782 add
+c59698f Merge branch 'mybranch'
+d877e84 add
+6bf7f87 task four
+41d9d46 added
+55f94c0 small
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ cat greeting.txt
+MY NAME IS Hello hi
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ ls
+ README.md               file1.txt   greeting.txt   task_five.txt   task_six.txt
+'RMI(Calculator).docx'   file2.txt   hello.txt      task_four.txt   task_three.txt
+ file.txt                greet.txt   task_8.txt     task_one.txt    task_two.txt
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git log --decorate --oneline
+b9e5f2d (HEAD -> master) revert "greeting changed"
+449cbf3 greeting changed
+476f09b (origin/master) task eight
+327f37f (uppercase) change to uppercase
+3c68faa changed readme
+1c330dc add content to greet.txt
+f338d91 greet deleted
+55bfb06 not
+85f0025 jo
+592ad0b read
+d4050c1 chang
+dca8b99 merge conflict
+ba6da3a add
+571a1c1 add relevant fact
+d709188 nnnMerge branch 'merge-conflict'
+423cb62 taks5
+dc32dbf file1
+bc05782 add
+c59698f Merge branch 'mybranch'
+d877e84 add
+6bf7f87 task four
+41d9d46 added
+55f94c0 small
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$ git revert 55f94c0
+Auto-merging file.txt
+CONFLICT (content): Merge conflict in file.txt
+error: could not revert 55f94c0... small
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git revert --continue".
+hint: You can instead skip this commit with "git revert --skip".
+hint: To abort and get back to the state before "git revert",
+hint: run "git revert --abort".
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master|REVERTING)
+$ git show 55f94c0
+commit 55f94c0d58f5728df8a458949679e333dca71357
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Mon Jan 10 22:36:59 2022 +0530
+
+    small
+
+diff --git a/file.txt b/file.txt
+index 1ae7c6c..ef1f6cf 100644
+--- a/file.txt
++++ b/file.txt
+@@ -1 +1 @@
+-my name is junaid khan
+\ No newline at end of file
++my name is junaid khan
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master|REVERTING)
+$ ^C
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master|REVERTING)
+$ git show d877e84
+commit d877e8485571a4394bd0c4f560971309e1ad635f
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 10:04:31 2022 +0530
+
+    add
+
+diff --git a/greeting.txt b/greeting.txt
+index a08432c..4c38b39 100644
+--- a/greeting.txt
++++ b/greeting.txt
+@@ -1 +1 @@
+-MY NAME IS
+\ No newline at end of file
++MY NAME IS Hello
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master|REVERTING)
+$ ^C
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master|REVERTING)
+$ git show 41d9d46
+commit 41d9d46e66f6f228ac95c22717d12cf98edd02aa
+Author: junaid khan <mdjunaidkhan1206@gmail.com>
+Date:   Tue Jan 11 09:55:50 2022 +0530
+
+    added
+
+diff --git a/greeting.txt b/greeting.txt
+new file mode 100644
+index 0000000..a08432c
+--- /dev/null
++++ b/greeting.txt
+@@ -0,0 +1 @@
++MY NAME IS
+\ No newline at end of file
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master|REVERTING)
+$ git show --skip
+fatal: Option '--skip' requires a value
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master|REVERTING)
+$ git revert --skip
+
+ADMIN@DESKTOP-R32O1H1 MINGW64 ~/Desktop/task 1 (master)
+$
