@@ -11,3 +11,5 @@ What is the output of git log --oneline --graph --all?
 Diff the branches
 Merge the greeting branch into master
 What is the output of git log --oneline --graph --all now? Observe the extra merge commit created with the message "Merge branch 'greeting'".
+
+greeting library
